@@ -93,6 +93,9 @@
     <ClCompile Include="Core\NElectro\DCMotor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Core\SDLWrapper\Transform2d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Engine\Application.h">
@@ -411,6 +414,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Core\NElectro\DCMotor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\SDLWrapper\Transform2d.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

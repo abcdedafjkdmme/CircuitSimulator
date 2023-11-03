@@ -38,6 +38,7 @@
     <ClCompile Include="Dependencies\SDL2_gfx-1.0.4\SDL2_gfxPrimitives.c" />
     <ClCompile Include="Dependencies\SDL2_gfx-1.0.4\SDL2_imageFilter.c" />
     <ClCompile Include="Dependencies\SDL2_gfx-1.0.4\SDL2_rotozoom.c" />
+    <ClCompile Include="Core\SDLWrapper\Transform2d.cpp" />
     <ClCompile Include="User\SimulatorApplication.cpp" />
     <ClCompile Include="User\Main.cpp" />
     <ClCompile Include="User\RootGameObject.cpp" />
@@ -147,6 +148,7 @@
     <ClInclude Include="Core\NElectro\PushButton.h" />
     <ClInclude Include="Core\SDLWrapper\Rect.h" />
     <ClInclude Include="Core\SDLWrapper\Line2d.h" />
+    <ClInclude Include="Core\SDLWrapper\Transform2d.h" />
     <ClInclude Include="User\SimulatorApplication.h" />
     <ClInclude Include="User\RootGameObject.h" />
     <ClInclude Include="User\UserArduino.h" />
