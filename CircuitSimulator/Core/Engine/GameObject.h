@@ -10,7 +10,6 @@ class GameObject
 	friend class GameObjectManager;
 public:
 	 GameObject();
-
 	virtual ~GameObject();
 
 public:
@@ -22,5 +21,9 @@ public:
 	{
 		return &v1 == &v2;
 	}
+public:
+	GameObject* Parent{ nullptr };
+	std::vector<GameObject*> Children;
+	void AddChild(GameObject& Obj);
 };
 

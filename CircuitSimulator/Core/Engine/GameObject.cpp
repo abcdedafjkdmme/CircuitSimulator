@@ -14,3 +14,9 @@ GameObject::~GameObject() {
 
 	
 }
+
+void GameObject::AddChild(GameObject& Obj)
+{
+	Children.push_back(&Obj);
+	Obj.Parent = this;
+}

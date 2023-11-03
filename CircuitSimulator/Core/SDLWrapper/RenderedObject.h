@@ -5,21 +5,25 @@
 #include  <SDL_image.h>
 #include <Vector2.h>
 #include "Camera.h"
+#include "Transform2d.h"
 
+class RenderManager;
 
 class RenderedObject 
 {
+    friend class RenderManager;
 public: 
-
-   
     RenderedObject(/*SDL_Renderer* Renderer*/) /*:mRenderer(Renderer)*/;
     virtual ~RenderedObject();
 
-    SDL_Renderer* mRenderer;
-    virtual void Render(Camera& Cam) {};
+    Transform2d Transform{};
     int ZIndex = 0;
 
+protected:
+    SDL_Renderer* mRenderer;
+    virtual void Render(Camera& Cam) {};
 
+public:
     friend bool operator==(const RenderedObject& v1, const RenderedObject& v2)
     {
         return &v1 == &v2;
