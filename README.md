@@ -18,6 +18,7 @@ PS: the project will be sorted out later. for now you have to follow these steps
 # How to create your own microcontrollers
 1. Create a new class inheriting from Arduino
 2. Now you can put your code in your custom arduino's constructor or in the overridden Tick function which runs every frame
+3. To learn more about how to create your custom microcontroller look into the Arduinos header file. I dont have enough time to write documentation 
 
 # How to connect different components with a wire
 1. Create a new Wire object
