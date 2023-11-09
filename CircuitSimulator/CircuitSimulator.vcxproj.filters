@@ -63,7 +63,7 @@
     <ClCompile Include="Core\SDLWrapper\Vector2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="User\SimulatorApplication.cpp">
+    <ClCompile Include="Core\NElectro\SimulatorApplication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Core\SDLWrapper\Camera.cpp">
@@ -374,7 +374,7 @@
     <ClInclude Include="Core\SDLWrapper\Vector2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="User\SimulatorApplication.h">
+    <ClInclude Include="Core\NElectro\SimulatorApplication.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Core\SDLWrapper\Camera.h">

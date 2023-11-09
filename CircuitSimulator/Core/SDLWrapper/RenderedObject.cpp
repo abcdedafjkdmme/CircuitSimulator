@@ -1,5 +1,6 @@
 #include "RenderedObject.h"
 #include <RenderManager.h>
+#include <iostream>
 
 //SDL_Rect RenderedObject::WorldToScreen(SDL_Rect Rect, Vector2 RectScale, Camera Cam)
 //{
@@ -38,6 +39,13 @@ RenderedObject::RenderedObject()
 	RenderManager& RManager = RenderManager::getInstance();
 	RManager.RegisterRenderedObject(*this);
 	mRenderer = RManager.gRenderer;
+	
+
+	/*GlobalTransform.TransformationMatrix = GlobalTransform.Rotated(90.0);
+	GlobalTransform.TransformationMatrix = GlobalTransform.Scaled(Eigen::Vector2d(1.0, 1.0));
+	
+	std::cout << GlobalTransform.TransformationMatrix << std::endl;*/
+
 }
 
 RenderedObject::~RenderedObject()

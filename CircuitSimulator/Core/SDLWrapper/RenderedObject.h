@@ -9,14 +9,16 @@
 
 class RenderManager;
 
+
 class RenderedObject 
 {
     friend class RenderManager;
 public: 
     RenderedObject(/*SDL_Renderer* Renderer*/) /*:mRenderer(Renderer)*/;
     virtual ~RenderedObject();
-
-    Transform2d Transform{};
+   
+    Transform2d GlobalTransform;
+    Transform2d LocalTransform;
     int ZIndex = 0;
 
 protected:
@@ -28,6 +30,7 @@ public:
     {
         return &v1 == &v2;
     }
+
 //protected:
 //    Vector2 GetTopLeftWorldPosition(Vector2 WorldPos, Vector2 PivotRelToWorld, Vector2 Scale);
 //    Vector2 WorldToScreen(Vector2 Vec, Camera Cam);

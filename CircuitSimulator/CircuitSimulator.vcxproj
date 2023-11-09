@@ -39,7 +39,7 @@
     <ClCompile Include="Dependencies\SDL2_gfx-1.0.4\SDL2_imageFilter.c" />
     <ClCompile Include="Dependencies\SDL2_gfx-1.0.4\SDL2_rotozoom.c" />
     <ClCompile Include="Core\SDLWrapper\Transform2d.cpp" />
-    <ClCompile Include="User\SimulatorApplication.cpp" />
+    <ClCompile Include="Core\NElectro\SimulatorApplication.cpp" />
     <ClCompile Include="User\Main.cpp" />
     <ClCompile Include="User\RootGameObject.cpp" />
     <ClCompile Include="User\UserArduino.cpp" />
@@ -149,7 +149,7 @@
     <ClInclude Include="Core\SDLWrapper\Rect.h" />
     <ClInclude Include="Core\SDLWrapper\Line2d.h" />
     <ClInclude Include="Core\SDLWrapper\Transform2d.h" />
-    <ClInclude Include="User\SimulatorApplication.h" />
+    <ClInclude Include="Core\NElectro\SimulatorApplication.h" />
     <ClInclude Include="User\RootGameObject.h" />
     <ClInclude Include="User\UserArduino.h" />
     <ClInclude Include="Core\SDLWrapper\RenderedObject.h" />
@@ -220,12 +220,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(ProjectDir)Core\Physics;$(ProjectDir)Core\Engine;$(ProjectDir)Core\SDLWrapper;$(ProjectDir)Dependencies\SDL2_gfx-1.0.4;$(ProjectDir)Core\NElectro;D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\include;D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\include;$(IncludePath);%(AdditionalIncludeDirectories)</IncludePath>
-    <LibraryPath>D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\lib\x64;D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\lib\x64;D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2_gfx-1.0.4\Win32\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)Core\Physics;$(ProjectDir)Core\Engine;$(ProjectDir)Core\SDLWrapper;$(ProjectDir)Dependencies\SDL2_gfx-1.0.4;$(ProjectDir)Core\NElectro;$(ProjectDir)Dependencies\Eigen;$(ProjectDir)Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\include;$(ProjectDir)Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\include;$(IncludePath);%(AdditionalIncludeDirectories)</IncludePath>
+    <LibraryPath>$(ProjectDir)Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\lib\x64;$(ProjectDir)Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\lib\x64;$(ProjectDir)Dependencies\SDL2_gfx-1.0.4\Win32\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(ProjectDir)Core\Physics;$(ProjectDir)Core\Engine;$(ProjectDir)Core\SDLWrapper;$(ProjectDir)Dependencies\SDL2_gfx-1.0.4;$(ProjectDir)Core\NElectro;D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\include;D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\include;$(IncludePath);%(AdditionalIncludeDirectories)</IncludePath>
-    <LibraryPath>D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\lib\x64;D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\lib\x64;D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2_gfx-1.0.4\Win32\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)Core\Physics;$(ProjectDir)Core\Engine;$(ProjectDir)Core\SDLWrapper;$(ProjectDir)Dependencies\SDL2_gfx-1.0.4;$(ProjectDir)Core\NElectro;$(ProjectDir)Dependencies\Eigen;$(ProjectDir)Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\include;$(ProjectDir)Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\include;$(IncludePath);%(AdditionalIncludeDirectories)</IncludePath>
+    <LibraryPath>$(ProjectDir)Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\lib\x64;$(ProjectDir)Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\lib\x64;$(ProjectDir)Dependencies\SDL2_gfx-1.0.4\Win32\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -261,8 +261,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>
-      </AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -278,8 +277,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>
-      </AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
