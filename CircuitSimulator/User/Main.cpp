@@ -1,12 +1,15 @@
-#include <Application.h>
+
+////#include <SDL.h>
+////#include <Application.h>
 #include "RootGameObject.h"
 #include <SimulatorApplication.h>
-//#include <WImage.h>
-//#include <Vector2.h>
+////#include <WImage.h>
+////#include <Vector2.h>
 //#include <Dense>
 
 
-int main(int argc, char* args[])
+int main(int argc, char* argv[])
+
 {
 	
 	SimulatorApplication App = SimulatorApplication();

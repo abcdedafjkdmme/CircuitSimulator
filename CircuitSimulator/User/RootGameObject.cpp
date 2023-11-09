@@ -2,7 +2,6 @@
 #include <Bulb.h>
 #include <Wire.h>
 #include <stdio.h>
-
 #include <PushButton.h>
 
 
@@ -12,7 +11,7 @@ RootGameObject::RootGameObject()
 {
 	
 	NewMotor->SetWorldPosition(Vector2(550.0, 200.0));
-	//UserArduino* NewArduino = new UserArduino();
+	UserArduino* NewArduino = new UserArduino();
 	NewArduino->SetWorldPosition(Vector2(100.0, 700.0));
 
 	/*UserArduino* NewArduino2 = new UserArduino();

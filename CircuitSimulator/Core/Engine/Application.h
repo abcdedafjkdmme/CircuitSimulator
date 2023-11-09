@@ -1,6 +1,5 @@
 #pragma once
 
-#pragma once
 #include <SDL.h>
 #include "GameObjectManager.h"
 #include "RenderManager.h"
