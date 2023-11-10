@@ -87,15 +87,6 @@
     <ClCompile Include="Core\SDLWrapper\Transform2d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="User\Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="User\RootGameObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="User\UserArduino.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Engine\Application.h">
@@ -411,12 +402,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Core\SDLWrapper\Transform2d.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="User\RootGameObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="User\UserArduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

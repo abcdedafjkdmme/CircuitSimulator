@@ -3,7 +3,7 @@
 
 Arduino::Arduino() {
 
-	Image->SetTexture("Core/NElectro/Resources/arduino-2168193_1280.png");
+	Image->SetTexture("../CircuitSimulator/Core/NElectro/Resources/arduino-2168193_1280.png");
 	Image->Size = Vector2(512, 362.8);
 
 	for (size_t i = 0; i < AmountOfPins; i++)
