@@ -71,10 +71,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2_gfx-1.0.4;D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\Eigen;D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\include;D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)CircuitSimulator\Dependencies\SDL2_gfx-1.0.4;$(SolutionDir)CircuitSimulator\Dependencies\Eigen;$(SolutionDir)CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\include;$(SolutionDir)CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2_gfx-1.0.4;D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\Eigen;D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\include;D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)CircuitSimulator\Dependencies\SDL2_gfx-1.0.4;$(SolutionDir)CircuitSimulator\Dependencies\Eigen;$(SolutionDir)CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\include;$(SolutionDir)CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -110,13 +110,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\VSProjs\CircuitSimulator\CircuitSimulator\Core\Physics;D:\VSProjs\CircuitSimulator\CircuitSimulator\Core\SDLWrapper;D:\VSProjs\CircuitSimulator\CircuitSimulator\Core\NElectro;D:\VSProjs\CircuitSimulator\CircuitSimulator\Core\Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)CircuitSimulator\Core\Physics;$(SolutionDir)CircuitSimulator\Core\SDLWrapper;$(SolutionDir)CircuitSimulator\Core\NElectro;$(SolutionDir)CircuitSimulator\Core\Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\lib\x64;D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\lib\x64;$(SolutionDir)CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -127,7 +127,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\VSProjs\CircuitSimulator\CircuitSimulator\Core\Physics;D:\VSProjs\CircuitSimulator\CircuitSimulator\Core\SDLWrapper;D:\VSProjs\CircuitSimulator\CircuitSimulator\Core\NElectro;D:\VSProjs\CircuitSimulator\CircuitSimulator\Core\Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)CircuitSimulator\Core\Physics;$(SolutionDir)CircuitSimulator\Core\SDLWrapper;$(SolutionDir)CircuitSimulator\Core\NElectro;$(SolutionDir)CircuitSimulator\Core\Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,7 +135,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\lib\x64;D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\lib\x64;$(SolutionDir)CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
