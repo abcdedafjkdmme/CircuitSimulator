@@ -7,7 +7,6 @@ PS: the project will be sorted out later. for now you have to follow these steps
 1. Clone the repo
 2. You can use the CircuitSimulatorDemo as an example
 
-5. **You need to manually link the sdl.dll and sdl_image.dll with system variables. will be fixed soon**
 
 # How to Use
 1. Create a SimulatorApplication Object in your main
