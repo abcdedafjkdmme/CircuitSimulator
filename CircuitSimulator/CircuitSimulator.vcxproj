@@ -43,6 +43,7 @@
     <ClCompile Include="Core\SDLWrapper\RenderedObject.cpp" />
     <ClCompile Include="Core\SDLWrapper\WImage.cpp" />
     <ClCompile Include="Core\SDLWrapper\Vector2.cpp" />
+    <ClCompile Include="Core\SDLWrapper\TransformComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Engine\ApplicationStatics.h" />
@@ -57,6 +58,7 @@
     <ClInclude Include="Core\NElectro\Pin.h" />
     <ClInclude Include="Core\NElectro\Wire.h" />
     <ClInclude Include="Core\Engine\RenderManager.h" />
+    <ClInclude Include="Core\SDLWrapper\MMath.h" />
     <ClInclude Include="Core\SDLWrapper\RenderingUtils.h" />
     <ClInclude Include="Core\NElectro\DCMotor.h" />
     <ClInclude Include="Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\include\begin_code.h" />
@@ -150,6 +152,7 @@
     <ClInclude Include="Core\SDLWrapper\RenderedObject.h" />
     <ClInclude Include="Core\SDLWrapper\WImage.h" />
     <ClInclude Include="Core\SDLWrapper\Vector2.h" />
+    <ClInclude Include="Core\SDLWrapper\TransformComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Core\NElectro\Resources\arduino-2168193_1280.png" />
@@ -215,11 +218,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)CircuitSimulator\Core\Physics;$(SolutionDir)CircuitSimulator\Core\Engine;$(SolutionDir)CircuitSimulator\Core\SDLWrapper;$(SolutionDir)CircuitSimulator\Dependencies\SDL2_gfx-1.0.4;D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\include;$(SolutionDir)CircuitSimulator\Core\NElectro;$(SolutionDir)CircuitSimulator\Dependencies\Eigen;$(SolutionDir)CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\include;$(SolutionDir)CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\include;$(IncludePath);%(AdditionalIncludeDirectories)</IncludePath>
+    <IncludePath>$(SolutionDir)CircuitSimulator\Core\Physics;$(SolutionDir)CircuitSimulator\Core\Engine;$(SolutionDir)CircuitSimulator\Core\SDLWrapper;$(SolutionDir)CircuitSimulator\Dependencies\SDL2_gfx-1.0.4;$(SolutionDir)CircuitSimulator\Core\NElectro;$(SolutionDir)CircuitSimulator\Dependencies\Eigen;$(SolutionDir)CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\include;$(SolutionDir)CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\include;$(IncludePath);%(AdditionalIncludeDirectories)</IncludePath>
     <LibraryPath>$(SolutionDir)CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\lib\x64;$(SolutionDir)CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\lib\x64;$(SolutionDir)CircuitSimulator\Dependencies\SDL2_gfx-1.0.4\Win32\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(SolutionDir)CircuitSimulator\Core\Physics;$(SolutionDir)CircuitSimulator\Core\Engine;$(SolutionDir)CircuitSimulator\Core\SDLWrapper;$(SolutionDir)CircuitSimulator\Dependencies\SDL2_gfx-1.0.4;D:\VSProjs\CircuitSimulator\CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\include;$(SolutionDir)CircuitSimulator\Core\NElectro;$(SolutionDir)CircuitSimulator\Dependencies\Eigen;$(SolutionDir)CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\include;$(SolutionDir)CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\include;$(IncludePath);%(AdditionalIncludeDirectories)</IncludePath>
+    <IncludePath>$(SolutionDir)CircuitSimulator\Core\Physics;$(SolutionDir)CircuitSimulator\Core\Engine;$(SolutionDir)CircuitSimulator\Core\SDLWrapper;$(SolutionDir)CircuitSimulator\Dependencies\SDL2_gfx-1.0.4;$(SolutionDir)CircuitSimulator\Core\NElectro;$(SolutionDir)CircuitSimulator\Dependencies\Eigen;$(SolutionDir)CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\include;$(SolutionDir)CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\include;$(IncludePath);%(AdditionalIncludeDirectories)</IncludePath>
     <LibraryPath>$(SolutionDir)CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\lib\x64;$(SolutionDir)CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\lib\x64;$(SolutionDir)CircuitSimulator\Dependencies\SDL2_gfx-1.0.4\Win32\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -256,7 +259,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)CircuitSimulator\Core\Physics;$(SolutionDir)CircuitSimulator\Core\Engine;$(SolutionDir)CircuitSimulator\Core\SDLWrapper;$(SolutionDir)CircuitSimulator\Dependencies\SDL2_gfx-1.0.4;$(SolutionDir)CircuitSimulator\Core\NElectro;$(SolutionDir)CircuitSimulator\Dependencies\Eigen;$(SolutionDir)CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\include;$(SolutionDir)CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\include;$(IncludePath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -277,7 +280,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)CircuitSimulator\Core\Physics;$(SolutionDir)CircuitSimulator\Core\Engine;$(SolutionDir)CircuitSimulator\Core\SDLWrapper;$(SolutionDir)CircuitSimulator\Dependencies\SDL2_gfx-1.0.4;$(SolutionDir)CircuitSimulator\Core\NElectro;$(SolutionDir)CircuitSimulator\Dependencies\Eigen;$(SolutionDir)CircuitSimulator\Dependencies\SDL2-devel-2.28.4-VC\SDL2-2.28.4\include;$(SolutionDir)CircuitSimulator\Dependencies\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\include;$(IncludePath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

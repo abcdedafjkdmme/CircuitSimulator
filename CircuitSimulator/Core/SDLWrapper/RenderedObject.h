@@ -5,20 +5,19 @@
 #include  <SDL_image.h>
 #include <Vector2.h>
 #include "Camera.h"
-#include "Transform2d.h"
+#include "TransformComponent.h"
 
 class RenderManager;
 
 
-class RenderedObject 
+class RenderedObject: public GameObject
 {
     friend class RenderManager;
 public: 
     RenderedObject(/*SDL_Renderer* Renderer*/) /*:mRenderer(Renderer)*/;
     virtual ~RenderedObject();
    
-    Transform2d GlobalTransform;
-    Transform2d LocalTransform;
+    TransformComponent Transform{};
     int ZIndex = 0;
 
 protected:

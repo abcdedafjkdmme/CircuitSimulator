@@ -36,7 +36,7 @@ protected:
 //protected:
 //	RenderManager& RManager = RenderManager::getInstance();
 public:
-	std::unique_ptr<WImage> Image = std::make_unique<WImage>();
+	WImage Image{};
 public:
 	void SetWorldPosition(Vector2 WorldPos);
 	Vector2 GetWorldPosition();

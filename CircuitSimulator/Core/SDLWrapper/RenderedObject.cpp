@@ -39,13 +39,8 @@ RenderedObject::RenderedObject()
 	RenderManager& RManager = RenderManager::getInstance();
 	RManager.RegisterRenderedObject(*this);
 	mRenderer = RManager.gRenderer;
+	AddChild(Transform);
 	
-
-	/*GlobalTransform.TransformationMatrix = GlobalTransform.Rotated(90.0);
-	GlobalTransform.TransformationMatrix = GlobalTransform.Scaled(Eigen::Vector2d(1.0, 1.0));
-	
-	std::cout << GlobalTransform.TransformationMatrix << std::endl;*/
-
 }
 
 RenderedObject::~RenderedObject()

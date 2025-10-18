@@ -1,6 +1,6 @@
 #pragma once
 #include "RenderedObject.h"
-#include <SDL.h>
+#include "SDL.h"
 #include <SDL_image.h>
 #include "Vector2.h"
 #include <IMoveable.h>
@@ -9,7 +9,7 @@ class WImage :public RenderedObject, public IMoveable
 {
 
 public:
-    //WImage(SDL_Renderer* Renderer) :RenderedObject(Renderer) {};
+    WImage();
 
 protected:
     SDL_Texture* Texture{ NULL };
@@ -38,5 +38,6 @@ public:
 public:
     void Render(Camera& Cam) override;
     ~WImage() override;
+    
 };
 

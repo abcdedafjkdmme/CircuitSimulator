@@ -1,45 +1,58 @@
 #include "Transform2d.h"
-#include <cmath>
-#ifndef M_PI
-#define M_PI 3.14159265358979323846
-#endif
+//#include <iostream>
 
 
-Transform2d::Transform2d()
+
+Vector2 Transform2d::GetTranslation()
 {
-	IdentityMatrix <<1, 0, 0,
-					 0, 1, 0,
-					 0, 0, 1;
+	return Vector2(TransformationMatrix(0,2),TransformationMatrix(1,2));
+}
 
-	TransformationMatrix = IdentityMatrix;
-
+double Transform2d::GetRotation()
+{
+	return atan2(TransformationMatrix(0, 1), TransformationMatrix(1, 1));
 }
 
 
+Vector2 Transform2d::GetScale()
+{
+	return Vector2(
+		sqrt(TransformationMatrix(0,0) * TransformationMatrix(0, 0) + TransformationMatrix(0, 1) * TransformationMatrix(0, 1)),
+		sqrt(TransformationMatrix(1, 0) * TransformationMatrix(1, 0) + TransformationMatrix(1, 1) * TransformationMatrix(1, 1))
+	);
+}
 
 Eigen::Matrix3d Transform2d::Translated(Eigen::Vector2d Trans)
 {
-	Eigen::Matrix3d NewTransform = TransformationMatrix;
+
+	return MMath::TranslateMatrix(IdentityMatrix, Trans);
+	/*Eigen::Matrix3d NewTransform = TransformationMatrix;
 
 	NewTransform(0, 3) = Trans.x();
 	NewTransform(1, 3) = Trans.y();
 
-	return  NewTransform * TransformationMatrix;
+	return  NewTransform * TransformationMatrix;*/
 }
+
+
 
 Eigen::Matrix3d Transform2d::Scaled(Eigen::Vector2d Scale)
 {
-	Eigen::Matrix3d NewTransform = TransformationMatrix;
+	return MMath::ScaleMatrix(IdentityMatrix, Scale);
+
+	/*Eigen::Matrix3d NewTransform = TransformationMatrix;
 
 	NewTransform(0, 0) = Scale.x();
 	NewTransform(1, 1) = Scale.y();
 	
-	return NewTransform* TransformationMatrix;
+	return NewTransform* TransformationMatrix;*/
 }
 
 Eigen::Matrix3d Transform2d::Rotated(double Rotation)
 {
-	Eigen::Matrix3d NewTransform = TransformationMatrix;
+	return MMath::RotateMatrix(IdentityMatrix, Rotation);
+
+	/*Eigen::Matrix3d NewTransform = TransformationMatrix;
 
 	double SineOfRotation = std::sin(Rotation/180.0* M_PI);
 
@@ -51,5 +64,17 @@ Eigen::Matrix3d Transform2d::Rotated(double Rotation)
 	NewTransform(1, 1) = CosOfRotation;
 
 
-	return NewTransform*TransformationMatrix;
+	return NewTransform*TransformationMatrix;*/
+}
+
+void Transform2d::ApplyTransforms(Vector2 Translation, double Rotation, Vector2 Scale)
+{
+
+	Eigen::Matrix3d AppliedTrans =  MMath::TranslateMatrix(IdentityMatrix, Eigen::Vector2d(Translation.X, Translation.Y));
+	Eigen::Matrix3d AppliedRot   =  MMath::RotateMatrix(IdentityMatrix, Rotation);
+	Eigen::Matrix3d AppliedScale =	MMath::ScaleMatrix(IdentityMatrix, Eigen::Vector2d(Scale.X, Scale.Y));
+
+	TransformationMatrix = AppliedTrans * AppliedRot * AppliedScale;
+
+
 }

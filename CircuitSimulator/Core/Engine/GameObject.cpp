@@ -1,6 +1,7 @@
 #include <GameObject.h>
-//#include "GameObjectManager.h"
+#include "GameObjectManager.h"
 #include <stdio.h>
+
 //#include "Singleton.cc"
 
 GameObject::GameObject() {
@@ -12,6 +13,10 @@ GameObject::~GameObject() {
 	//printf("game object deleted \n");
 	GameObjectManager::getInstance().UnregisterGameObject(*this);
 
+	for (auto* Child : Children)
+	{
+		Child->Parent = nullptr;
+	}
 	
 }
 

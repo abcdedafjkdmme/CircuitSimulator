@@ -87,6 +87,9 @@
     <ClCompile Include="Core\SDLWrapper\Transform2d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Core\SDLWrapper\TransformComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Engine\Application.h">
@@ -402,6 +405,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Core\SDLWrapper\Transform2d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\SDLWrapper\TransformComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\SDLWrapper\MMath.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

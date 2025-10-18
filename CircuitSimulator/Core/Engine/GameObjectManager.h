@@ -3,8 +3,10 @@
 #include <memory>
 #include <stdio.h>
 #include <GameObject.h>
+#include <SDL.h>
 
 class Application;
+
 class GameObjectManager
 {
 	friend class GameObject;

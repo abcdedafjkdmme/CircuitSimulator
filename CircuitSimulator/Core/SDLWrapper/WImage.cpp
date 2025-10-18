@@ -3,6 +3,12 @@
 #include <RenderingUtils.h>
 
 
+WImage::WImage()
+{
+	
+
+}
+
 void WImage::SetWorldPosition(Vector2 WorldPos)
 {
 	WorldPosition = WorldPos;

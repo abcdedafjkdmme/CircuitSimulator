@@ -1,8 +1,3 @@
-
-
-/*This source code copyrighted by Lazy Foo' Productions 2004-2023
-and may not be redistributed without written permission.*/
-
 //Using SDL and standard IO
 #include "Application.h"
 #include <SDL.h>
@@ -74,7 +69,7 @@ void Application::SDLEventLoop()
 
 void Application::GameLoop()
 {
-
+	
 	while (SDL_PollEvent(&Event)) {
 		ObjectManager.SendInputToAllGameObject(Event);
 		SDLEventLoop();

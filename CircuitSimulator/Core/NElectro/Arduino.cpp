@@ -1,15 +1,18 @@
 #include <Arduino.h>
 #include <stdio.h>
+#include <iostream>
+
 
 Arduino::Arduino() {
 
-	Image->SetTexture("../CircuitSimulator/Core/NElectro/Resources/arduino-2168193_1280.png");
-	Image->Size = Vector2(512, 362.8);
+	
+	Image.SetTexture("../CircuitSimulator/Core/NElectro/Resources/arduino-2168193_1280.png");
+	Image.Size = Vector2(512, 362.8);
 
 	for (size_t i = 0; i < AmountOfPins; i++)
 	{
 		std::unique_ptr<Pin> newPin = std::make_unique<Pin>();
-		newPin->SetWorldPosition(Image->GetWorldPosition());
+		newPin->SetWorldPosition(Image.GetWorldPosition());
 		Pins.push_back(std::move(newPin));
 	}
 	
@@ -63,7 +66,7 @@ void Arduino::SetPinMode(int PIN, PinState State)
 
 void Arduino::Tick(double DeltaTime)
 {
-	
+
 	
 }
 
@@ -74,12 +77,12 @@ void Arduino::SetWorldPosition(Vector2 WorldPos)
 		/*Pin->SetWorldPosition(WorldPos + (Pin->GetWorldPosition() - Image->GetWorldPosition()));*/
 		Pin->SetWorldPosition(WorldPos + Vector2(327.0, 19.2));
 	}
-	Image->SetWorldPosition(WorldPos);
+	Image.SetWorldPosition(WorldPos);
 }
 
 Vector2 Arduino::GetWorldPosition()
 {
-	return Image->GetWorldPosition();
+	return Image.GetWorldPosition();
 }
 
 

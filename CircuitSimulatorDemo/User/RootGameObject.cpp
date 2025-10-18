@@ -3,8 +3,8 @@
 #include <Wire.h>
 #include <stdio.h>
 #include <PushButton.h>
-
-
+#include <iostream>
+#include <MMath.h>
 
 
 RootGameObject::RootGameObject()
@@ -30,6 +30,15 @@ RootGameObject::RootGameObject()
 	PushButton* NewButton = new PushButton();
 	NewButton->Image->ZIndex = -2;
 	NewButton->SetWorldPosition(Vector2(-500.0, 200.0));
+
+	
+	
+	NewArduino->Image.Transform.SetGlobalRotation(MMath::DegreeToRadian(30));
+	NewArduino->Image.Transform.SetGlobalTranslation(Vector2(10.0, 10.0));
+	//NewArduino->Image.Transform.SetGlobalScale(Vector2(10.0, 10.0));
+	
+	std::cout << MMath::RadianToDegree( NewArduino->Image.Transform.GlobalTransform.GetRotation() )<< std::endl;
+	
 
 	//delete NewArduino;
 
