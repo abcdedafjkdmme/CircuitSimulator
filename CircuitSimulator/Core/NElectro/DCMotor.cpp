@@ -2,8 +2,8 @@
 
 DCMotor::DCMotor()
 {
-	BackgroundImage->SetTexture("../CircuitSimulator/Core/NElectro/Resources/DcMotor.png");
-	CogWheelImage->SetTexture("../CircuitSimulator/Core/NElectro/Resources/DcMotorCogwheel.png");
+	BackgroundImage->SetTexture("Resources/DcMotor.png");
+	CogWheelImage->SetTexture("Resources/DcMotorCogwheel.png");
 }
 
 void DCMotor::Tick(double DeltaTime)

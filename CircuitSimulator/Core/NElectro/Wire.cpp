@@ -6,7 +6,7 @@
 void Wire::MakeConnections(Pin& _StartPin, Pin& _EndPin)
 {
 	// if the start or end pins were previously set by making connection then clear all rendered points so it doesnt seem like same wire is connected to multiple pins
-	if (StartPin or EndPin) {
+	if (StartPin || EndPin) {
 		RenderedLine->RemoveAllPoints();
 	}
 

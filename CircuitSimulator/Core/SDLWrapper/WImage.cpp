@@ -25,7 +25,7 @@ void WImage::SetTexture(std::string path)
 	Texture = IMG_LoadTexture(mRenderer, path.c_str());
 
 	// if the default size is not provided use size of texture
-	if (Size.X == 0 or Size.Y == 0) {
+	if (Size.X == 0 || Size.Y == 0) {
 		SDL_Point TextureSize = GetSizeOfTexture(Texture);
 		Size.X = TextureSize.x;
 		Size.Y = TextureSize.y;

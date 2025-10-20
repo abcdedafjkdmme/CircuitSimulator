@@ -25,8 +25,8 @@ protected:
     void Tick(double DeltaTime) override;
 public:
     std::unique_ptr<WImage> Image = std::make_unique<WImage>();
-    const std::string LitImagePath = "../CircuitSimulator/Core/NElectro/Resources/LedBright.png";
-    const std::string DimImagePath = "../CircuitSimulator/Core/NElectro/Resources/LedDim.png";
+    const std::string LitImagePath = "Resources/LedBright.png";
+    const std::string DimImagePath = "Resources/LedDim.png";
 
 public:
     void SetWorldPosition(Vector2 WorldPos);

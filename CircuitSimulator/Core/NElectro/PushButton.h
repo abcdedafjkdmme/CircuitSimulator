@@ -18,8 +18,8 @@ private:
     bool IsButtonPushedDown{ false };
     double PassedTimeSinceButtonPushedDown{ 0.0 };
     const double TimeNeededToBeUnpushed{ 0.4 };
-    const std::string PushedDownImage = "../CircuitSimulator/Core/NElectro/Resources/PushButtonPushed.png";
-    const std::string UnpushedImage = "../CircuitSimulator/Core/NElectro/Resources/PushButtonUnpushed.png";
+    const std::string PushedDownImage = "Resources/PushButtonPushed.png";
+    const std::string UnpushedImage = "Resources/PushButtonUnpushed.png";
    
 public:
     CollisionRect ColRect{ Vector2(0.0,0.0),Vector2(500.0,500.0),true };
